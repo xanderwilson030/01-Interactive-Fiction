@@ -3,220 +3,287 @@ import sys
 assert sys.version_info >= (3,9), "This script requires at least Python 3.9"
 
 world = {
-  "uuid": "216ACD94-C70D-42CE-80F1-FA90A0D7F747",
-  "name": "Zork",
+  "uuid": "E9ED8A9A-379E-46D9-98BD-39EC7BADDB72",
+  "name": "Pyramid",
   "creator": "Twine",
   "creatorVersion": "2.3.14",
   "schemaName": "Harlowe 3 to JSON",
   "schemaVersion": "0.0.6",
-  "createdAtMs": 1630601285901,
+  "createdAtMs": 1630987096723,
   "passages": [
     {
-      "name": "West of House",
+      "name": "Desert",
       "tags": "",
       "id": "1",
-      "text": "This is an open field west of a white house, with a boarded front door.\n\n[[NORTH->North of House]]\n[[SOUTH->South of House]]\n[[WEST->Forest]]",
+      "text": "You are at the edge of a great expanse. Around you lies nothing but sand and bones. In the distance, you notice a large pyramid rising out of the sand to your north. To your east and west lie more sand. Your exit is to your south.\n\n[[NORTH->Pyramid Base]]\n[[WEST->Glass Desert]]\n[[EAST->Mirage]]\n[[SOUTH->Leave]]",
       "links": [
         {
           "linkText": "NORTH",
-          "passageName": "North of House",
-          "original": "[[NORTH->North of House]]"
-        },
-        {
-          "linkText": "SOUTH",
-          "passageName": "South of House",
-          "original": "[[SOUTH->South of House]]"
+          "passageName": "Pyramid Base",
+          "original": "[[NORTH->Pyramid Base]]"
         },
         {
           "linkText": "WEST",
-          "passageName": "Forest",
-          "original": "[[WEST->Forest]]"
+          "passageName": "Glass Desert",
+          "original": "[[WEST->Glass Desert]]"
+        },
+        {
+          "linkText": "EAST",
+          "passageName": "Mirage",
+          "original": "[[EAST->Mirage]]"
+        },
+        {
+          "linkText": "SOUTH",
+          "passageName": "Leave",
+          "original": "[[SOUTH->Leave]]"
         }
       ],
       "hooks": [],
-      "cleanText": "This is an open field west of a white house, with a boarded front door."
+      "cleanText": "You are at the edge of a great expanse. Around you lies nothing but sand and bones. In the distance, you notice a large pyramid rising out of the sand to your north. To your east and west lie more sand. Your exit is to your south."
     },
     {
-      "name": "North of House",
+      "name": "Pyramid Base",
       "tags": "",
       "id": "2",
-      "text": "You are facing the north side of a white house. There is no door here, and all the windows are barred.\n\n[[WEST->West of House]]\n[[EAST->East of House]]\n[[NORTH->Forest]]",
+      "text": "You gaze up at the mighty pyramid, the stones covered in layers of dust and sand. There appears to be a hole in the wall that you can climb in through. Dare you ENTER?\n\n[[ENTER->Pyramid Interior]]\n[[BACK->Desert]]",
       "links": [
-        {
-          "linkText": "WEST",
-          "passageName": "West of House",
-          "original": "[[WEST->West of House]]"
-        },
-        {
-          "linkText": "EAST",
-          "passageName": "East of House",
-          "original": "[[EAST->East of House]]"
-        },
-        {
-          "linkText": "NORTH",
-          "passageName": "Forest",
-          "original": "[[NORTH->Forest]]"
-        }
-      ],
-      "hooks": [],
-      "cleanText": "You are facing the north side of a white house. There is no door here, and all the windows are barred."
-    },
-    {
-      "name": "South of House",
-      "tags": "",
-      "id": "3",
-      "text": "You are facing the south side of a white house. There is no door here, and all the windows are barred.\n\n[[WEST->West of House]]\n[[EAST->East of House]]\n[[SOUTH->Forest]]",
-      "links": [
-        {
-          "linkText": "WEST",
-          "passageName": "West of House",
-          "original": "[[WEST->West of House]]"
-        },
-        {
-          "linkText": "EAST",
-          "passageName": "East of House",
-          "original": "[[EAST->East of House]]"
-        },
-        {
-          "linkText": "SOUTH",
-          "passageName": "Forest",
-          "original": "[[SOUTH->Forest]]"
-        }
-      ],
-      "hooks": [],
-      "cleanText": "You are facing the south side of a white house. There is no door here, and all the windows are barred."
-    },
-    {
-      "name": "Forest",
-      "tags": "",
-      "id": "4",
-      "text": "This is a forest, with trees in all directions around you.\n\n[[NORTH->Sunlit Forest]]\n[[EAST->Forest]]\n[[SOUTH->Forest]]\n[[WEST->Forest]]",
-      "links": [
-        {
-          "linkText": "NORTH",
-          "passageName": "Sunlit Forest",
-          "original": "[[NORTH->Sunlit Forest]]"
-        },
-        {
-          "linkText": "EAST",
-          "passageName": "Forest",
-          "original": "[[EAST->Forest]]"
-        },
-        {
-          "linkText": "SOUTH",
-          "passageName": "Forest",
-          "original": "[[SOUTH->Forest]]"
-        },
-        {
-          "linkText": "WEST",
-          "passageName": "Forest",
-          "original": "[[WEST->Forest]]"
-        }
-      ],
-      "hooks": [],
-      "cleanText": "This is a forest, with trees in all directions around you."
-    },
-    {
-      "name": "East of House",
-      "tags": "",
-      "id": "5",
-      "text": "You are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.\n\n[[NORTH->North of House]]\n[[SOUTH->South of House]]\n[[EAST->Sunlit Forest]]\n[[WEST->Kitchen]]\n[[ENTER->Kitchen]]",
-      "links": [
-        {
-          "linkText": "NORTH",
-          "passageName": "North of House",
-          "original": "[[NORTH->North of House]]"
-        },
-        {
-          "linkText": "SOUTH",
-          "passageName": "South of House",
-          "original": "[[SOUTH->South of House]]"
-        },
-        {
-          "linkText": "EAST",
-          "passageName": "Sunlit Forest",
-          "original": "[[EAST->Sunlit Forest]]"
-        },
-        {
-          "linkText": "WEST",
-          "passageName": "Kitchen",
-          "original": "[[WEST->Kitchen]]"
-        },
         {
           "linkText": "ENTER",
-          "passageName": "Kitchen",
-          "original": "[[ENTER->Kitchen]]"
+          "passageName": "Pyramid Interior",
+          "original": "[[ENTER->Pyramid Interior]]"
+        },
+        {
+          "linkText": "BACK",
+          "passageName": "Desert",
+          "original": "[[BACK->Desert]]"
         }
       ],
       "hooks": [],
-      "cleanText": "You are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar."
+      "cleanText": "You gaze up at the mighty pyramid, the stones covered in layers of dust and sand. There appears to be a hole in the wall that you can climb in through. Dare you ENTER?"
     },
     {
-      "name": "Sunlit Forest",
+      "name": "Glass Desert",
       "tags": "",
-      "id": "6",
-      "text": "This is a dimly lit forest, with large trees all around. One particularly large tree with some low branches stands here.\n\n[[NORTH->Forest]]\n[[SOUTH->Forest]]\n[[EAST->Forest]]\n[[WEST->East of House]]\n[[UP->Tree]]",
+      "id": "3",
+      "text": "After traveling a fair distance to the east, you notice you've come upon a desert made entirely out of glass. Unfortunately for you, your shoes do not have enough padding to cross this glass basin. It would prove fatal to do so.\n\n[[WEST->Desert]]",
       "links": [
-        {
-          "linkText": "NORTH",
-          "passageName": "Forest",
-          "original": "[[NORTH->Forest]]"
-        },
-        {
-          "linkText": "SOUTH",
-          "passageName": "Forest",
-          "original": "[[SOUTH->Forest]]"
-        },
-        {
-          "linkText": "EAST",
-          "passageName": "Forest",
-          "original": "[[EAST->Forest]]"
-        },
         {
           "linkText": "WEST",
-          "passageName": "East of House",
-          "original": "[[WEST->East of House]]"
+          "passageName": "Desert",
+          "original": "[[WEST->Desert]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "After traveling a fair distance to the east, you notice you've come upon a desert made entirely out of glass. Unfortunately for you, your shoes do not have enough padding to cross this glass basin. It would prove fatal to do so."
+    },
+    {
+      "name": "Mirage",
+      "tags": "",
+      "id": "4",
+      "text": "In the distance you notice a speck of green. Could it be an oasis?! Wrong. It was just mirage. All you did was look foolish.\n\n[[WEST->Desert]]",
+      "links": [
+        {
+          "linkText": "WEST",
+          "passageName": "Desert",
+          "original": "[[WEST->Desert]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "In the distance you notice a speck of green. Could it be an oasis?! Wrong. It was just mirage. All you did was look foolish."
+    },
+    {
+      "name": "Leave",
+      "tags": "",
+      "id": "5",
+      "text": "You choose to leave the desert. Perhaps a very untraditional choice. It's not very nice to ignore all the work the narrator has put in for you. You can either move FORWARD with your life, or turn BACK.\n\n[[BACK->Desert]]\n[[FORWARD->New Life]]",
+      "links": [
+        {
+          "linkText": "BACK",
+          "passageName": "Desert",
+          "original": "[[BACK->Desert]]"
         },
         {
-          "linkText": "UP",
-          "passageName": "Tree",
-          "original": "[[UP->Tree]]"
+          "linkText": "FORWARD",
+          "passageName": "New Life",
+          "original": "[[FORWARD->New Life]]"
         }
       ],
       "hooks": [],
-      "cleanText": "This is a dimly lit forest, with large trees all around. One particularly large tree with some low branches stands here."
+      "cleanText": "You choose to leave the desert. Perhaps a very untraditional choice. It's not very nice to ignore all the work the narrator has put in for you. You can either move FORWARD with your life, or turn BACK."
     },
     {
-      "name": "Kitchen",
+      "name": "New Life",
+      "tags": "",
+      "id": "6",
+      "score":10,
+      "text": "It looks like you're really doing this, aren't you? A bit heartbreaking, but lets continue. After escaping the desert, you return to your hotel room and go to the airport, returning home. Your parents aren't too happy to see you back, after all, you are 30, and you still live in their basement. They kick you out of the house for good, wanting you to make something of yourself. You start to think, what if you wrote a novel about your experiences? Or maybe a movie. You can either move forward for a NOVEL or a MOVIE, or you can go back.\n\n[[BACK->Leave]]\n[[Novel->Novel Idea]]\n[[Movie->Movie Idea]]",
+      "links": [
+        {
+          "linkText": "BACK",
+          "passageName": "Leave",
+          "original": "[[BACK->Leave]]"
+        },
+        {
+          "linkText": "NOVEL",
+          "passageName": "Novel Idea",
+          "original": "[[NOVEL->Novel Idea]]"
+        },
+        {
+          "linkText": "MOVIE",
+          "passageName": "Movie Idea",
+          "original": "[[MOVIE->Movie Idea]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "It looks like you're really doing this, aren't you? A bit heartbreaking, but lets continue. After escaping the desert, you return to your hotel room and go to the airport, returning home. Your parents aren't too happy to see you back, after all, you are 30, and you still live in their basement. They kick you out of the house for good, wanting you to make something of yourself. You start to think, what if you wrote a novel about your experiences? Or maybe a movie. You can either move forward for a NOVEL or a MOVIE, or you can go back."
+    },
+    {
+      "name": "Novel Idea",
       "tags": "",
       "id": "7",
-	  "score": 20,
-      "text": "You are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is open.\n\n[[EAST->East of House]]",
+      "text": "A writing storm has overtaken you! Furiously transcribing your answers down on the pages, you create a beautiful masterpiece. There might be some slight exaggerations present inside, but if you removed them there wouldn't be much of a book left. All that's left is for you to choose, SELFPUBLISH or go with a traditional PUBLISHER. You can always go back to your parent's basement... maybe.\n\n[[SELFPUBLISH->Self Publish]]\n[[PUBLISHER->Publish]]\n[[BACK->New Life]]",
       "links": [
         {
-          "linkText": "EAST",
-          "passageName": "East of House",
-          "original": "[[EAST->East of House]]"
+          "linkText": "SELFPUBLISH",
+          "passageName": "Self Publish",
+          "original": "[[SELFPUBLISH->Self Publish]]"
+        },
+        {
+          "linkText": "PUBLISHER",
+          "passageName": "Publish",
+          "original": "[[PUBLISHER->Publish]]"
+        },
+        {
+          "linkText": "BACK",
+          "passageName": "New Life",
+          "original": "[[BACK->New Life]]"
         }
       ],
       "hooks": [],
-      "cleanText": "You are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is open."
+      "cleanText": "A writing storm has overtaken you! Furiously transcribing your answers down on the pages, you create a beautiful masterpiece. There might be some slight exaggerations present inside, but if you removed them there wouldn't be much of a book left. All that's left is for you to choose, SELFPUBLISH or go with a traditional PUBLISHER. You can always go back to your parent's basement... maybe."
     },
     {
-      "name": "Tree",
+      "name": "Movie Idea",
       "tags": "",
       "id": "8",
-	  "score": 10,
-      "text": "You are about 10 feet above the ground nestled among some large branches. The nearest branch above you is above your reach. Beside you on the branch is a small bird's nest.\n\n[[DOWN->Sunlit Forest]]",
+      "score": 20,
+      "text": "A movie! That's what's all the rage these days. Why bother writing a book when you can write a much longer script. You furiously piece together your script and travel to the annual Director's convention in Hollywood, CA. Who will you show your script to? Steven SPIELBERG or George LUCAS.\n\n[[LUCAS->No Movie]]\n[[SPIELBERG->No Movie]]",
       "links": [
         {
-          "linkText": "DOWN",
-          "passageName": "Sunlit Forest",
-          "original": "[[DOWN->Sunlit Forest]]"
+          "linkText": "LUCAS",
+          "passageName": "No Movie",
+          "original": "[[LUCAS->No Movie]]"
+        },
+        {
+          "linkText": "SPIELBERG",
+          "passageName": "No Movie",
+          "original": "[[SPIELBERG->No Movie]]"
         }
       ],
       "hooks": [],
-      "cleanText": "You are about 10 feet above the ground nestled among some large branches. The nearest branch above you is above your reach. Beside you on the branch is a small bird's nest."
+      "cleanText": "A movie! That's what's all the rage these days. Why bother writing a book when you can write a much longer script. You furiously piece together your script and travel to the annual Director's convention in Hollywood, CA. Who will you show your script to? Steven SPIELBERG or George LUCAS."
+    },
+    {
+      "name": "Self Publish",
+      "tags": "",
+      "id": "9",
+      "text": "Publishers aren't really your thing, so you decide to self publish. It is difficult to source the money for legal fees and printing, but eventually you get your book available for sale. It ends up on the New York Times #1 don't read list. ...Hold on a second, that can't be right. I thought the whole point of this was for you to be independent and live on your own? I guess the writers over there spotted your lies pretty quickly. Nobody would believe you found bananas in a desert.\n\n[[BACK->New Life]]",
+      "links": [
+        {
+          "linkText": "BACK",
+          "passageName": "New Life",
+          "original": "[[BACK->New Life]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "Publishers aren't really your thing, so you decide to self publish. It is difficult to source the money for legal fees and printing, but eventually you get your book available for sale. It ends up on the New York Times #1 don't read list. ...Hold on a second, that can't be right. I thought the whole point of this was for you to be independent and live on your own? I guess the writers over there spotted your lies pretty quickly. Nobody would believe you found bananas in a desert."
+    },
+    {
+      "name": "Publish",
+      "tags": "",
+      "id": "10",
+      "text": "You are a person of great tradition, and you decide to go with a very esteemed publisher. Unfortunately, publishers tend to fact check your information. After realizing your book is full of lies, you get dropped, and banned from every publisher in North America. Maybe your parents would take you back in.\n\n[[BACK->New Life]]",
+      "links": [
+        {
+          "linkText": "BACK",
+          "passageName": "New Life",
+          "original": "[[BACK->New Life]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "You are a person of great tradition, and you decide to go with a very esteemed publisher. Unfortunately, publishers tend to fact check your information. After realizing your book is full of lies, you get dropped, and banned from every publisher in North America. Maybe your parents would take you back in."
+    },
+    {
+      "name": "No Movie",
+      "tags": "",
+      "id": "11",
+      "text": "They ignore you... After laughing, of course\n\n[[BACK->New Life]]",
+      "links": [
+        {
+          "linkText": "BACK",
+          "passageName": "New Life",
+          "original": "[[BACK->New Life]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "They ignore you... After laughing, of course"
+    },
+    {
+      "name": "Pyramid Interior",
+      "tags": "",
+      "id": "12",
+      "text": "You make it inside the pyramid. In front of you lies a PASSAGE into darkness. On your right rests a DOOR with a large scorpion on it. Where do you dare go?\n\n[[PASSAGE->Riches]]\n[[DOOR->Scorpions]]\n[[BACK->Desert]]",
+      "links": [
+        {
+          "linkText": "PASSAGE",
+          "passageName": "Riches",
+          "original": "[[PASSAGE->Riches]]"
+        },
+        {
+          "linkText": "DOOR",
+          "passageName": "Scorpions",
+          "original": "[[DOOR->Scorpions]]"
+        },
+        {
+          "linkText": "BACK",
+          "passageName": "Desert",
+          "original": "[[BACK->Desert]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "You make it inside the pyramid. In front of you lies a PASSAGE into darkness. On your right rests a DOOR with a large scorpion on it. Where do you dare go?"
+    },
+    {
+      "name": "Riches",
+      "tags": "",
+      "id": "13",
+      "score":100,
+      "text": "At the end of the dark passage is a tomb filled with unimagineable riches. You've done it! Take that Mr. Baker, you were actually paying attention in history class.\n\n[[BACK->Pyramid Interior]]",
+      "links": [
+        {
+          "linkText": "BACK",
+          "passageName": "Pyramid Interior",
+          "original": "[[BACK->Pyramid Interior]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "At the end of the dark passage is a tomb filled with unimagineable riches. You've done it! Take that Mr. Baker, you were actually paying attention in history class."
+    },
+    {
+      "name": "Scorpions",
+      "tags": "",
+      "id": "14",
+      "score": 1,
+      "text": "Oh, if only you had heeded the warning! You fall into a pit of scorpions and lay trapped. If you're careful, you might be able to CLIMB back up.\n\n[[CLIMB->Pyramid Interior]]",
+      "links": [
+        {
+          "linkText": "CLIMB",
+          "passageName": "Pyramid Interior",
+          "original": "[[CLIMB->Pyramid Interior]]"
+        }
+      ],
+      "hooks": [],
+      "cleanText": "Oh, if only you had heeded the warning! You fall into a pit of scorpions and lay trapped. If you're careful, you might be able to CLIMB back up."
     }
   ]
 }
@@ -225,58 +292,58 @@ world = {
 # ----------------------------------------------------------------
 
 def find_current_location(location_label):
-	if "passages" in world:
-		for passage in world["passages"]:
-			if location_label == passage["name"]:
-				return passage
-	return {}
+    if "passages" in world:
+        for passage in world["passages"]:
+            if location_label == passage["name"]:
+                return passage
+    return {}
 
 # ----------------------------------------------------------------
 
 def render(current_location, score, moves):
-	if "name" in current_location and "cleanText" in current_location:
-		print("Moves: " + str(moves) + ", Score: " + str(score))
-	  	print("You are at the " + str(current_location["name"]))
-	  	print(current_location["cleanText"] + "\n")
+    if "name" in current_location and "cleanText" in current_location:
+        print("Moves: " + str(moves) + ", Score: " + str(score))
+        print("You are at the " + str(current_location["name"]))
+        print(current_location["cleanText"] + "\n")
     
 
 def get_input():
-	response = input("What do you want to do? ")
-	response = response.upper().strip()
-	return response
+    response = input("What do you want to do? ")
+    response = response.upper().strip()
+    return response
 
 def update(current_location, location_label, response):
-	if response == "":
-		return location_label
-	if "links" in current_location:
-		for link in current_location["links"]:
-			if link["linkText"] == response:
-				return link["passageName"]
-	print("I don't understand what you are trying to do. Try again.")
-	return location_label
+    if response == "":
+        return location_label
+    if "links" in current_location:
+        for link in current_location["links"]:
+            if link["linkText"] == response:
+                return link["passageName"]
+    print("I don't understand what you are trying to do. Try again.")
+    return location_label
 
 
 # ----------------------------------------------------------------
 
-location_label = "West of House"
+location_label = "Desert"
 current_location = {}
 response = ""
 score = 0
 moves = 0
 
 while True:
-	if response == "QUIT":
-		break
-	moves += 1
+    if response == "QUIT":
+        break
+    moves += 1
 
-	location_label = update(current_location, location_label, response)
-	current_location = find_current_location(location_label)
+    location_label = update(current_location, location_label, response)
+    current_location = find_current_location(location_label)
 
- 	if "score" in current_location:
-		score = score + current_location["score"]
+    if "score" in current_location:
+        score = score + current_location["score"]
 
-	render(current_location, score, moves)
-	response = get_input()
+    render(current_location, score, moves)
+    response = get_input()
 
 
 print("Thanks for playing!")
